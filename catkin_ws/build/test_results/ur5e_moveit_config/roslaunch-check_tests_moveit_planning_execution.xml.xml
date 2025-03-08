@@ -1,0 +1,1 @@
+<testsuite tests="1" failures="0" time="1" errors="0" name="roslaunch-check_tests_moveit_planning_execution.xml.xml"><testcase name="ur5e_moveit_config_tests_moveit_planning_execution_xml" status="run" time="1" classname="roslaunch.RoslaunchCheck" /></testsuite>

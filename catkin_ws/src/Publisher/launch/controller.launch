@@ -1,0 +1,14 @@
+<launch>
+  <!-- Launch command 1 in a new Terminator tab -->
+  <arg name="command1" value="roslaunch ur_calibration calibration_correction.launch robot_ip:=169.254.220.10 target_filename:=${HOME}/my_robot_calibration.yaml" />
+  <node name="command1_node" pkg="terminator" type="terminator" args="--execute=$(arg command1)" output="screen" />
+
+  <!-- Launch command 2 in a new Terminator tab -->
+  <arg name="command2" value="roslaunch ur_robot_driver ur10e_bringup.launch robot_ip:=169.254.220.10 kinematics_config:=${HOME}/my_robot_calibration.yaml" />
+  <node name="command2_node" pkg="terminator" type="terminator" args="--execute=$(arg command2)" output="screen" />
+
+  <!-- Launch command 3 in a new Terminator tab -->
+  <arg name="command3" value="roslaunch ur10e_moveit_config moveit_planning_execution.launch" />
+  <node name="command3_node" pkg="terminator" type="terminator" args="--execute=$(arg command3)" output="screen" />
+</launch>
+

@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/kathan/devel -DCMAKE_INSTALL_PREFIX=/home/kathan/install -G Unix Makefiles
